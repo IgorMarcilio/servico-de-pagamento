@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/*.js",
+    "test:report": "mocha test/*.js --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=index,quiet=true"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "homepage": "https://github.com/IgorMarcilio/servico-de-pagamento.js#readme",
   "dependencies": {
     "mocha": "^11.7.6"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.4"
   }
 }
