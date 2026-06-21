@@ -14,7 +14,7 @@ A Integração Contínua (CI) é uma prática de desenvolvimento de software ond
 Os principais benefícios são:
 * **Feedback rápido:** O desenvolvedor sabe se quebrou algo logo após fazer o commit.
 * **Segurança na entrega:** Evita que código com bugs ou erros de sintaxe vá para produção.
-* **Histórico confiável:** Garante que a branch principal (`main` ou `master`) esteja sempre estável e testada.
+* **Histórico confiável:** Garante que a branch principal (`main`) esteja sempre estável e testada.
 
 ---
 
