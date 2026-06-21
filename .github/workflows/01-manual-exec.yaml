@@ -4,6 +4,9 @@ name: "Execução Manual"
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   e2e-tests:
@@ -25,4 +28,11 @@ jobs:
         run: yarn
 
       - name: Executando testes e2e
-        run: yarn run test
+        run: yarn test:report
+
+      - name: Publicar Relatorio
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: relatorio-manual-e-push
+          path: mochawesome-report/
