@@ -1,0 +1,29 @@
+# CI de Nível 02 - Disparo Agendado atraves de clique
+
+name: "Scheduled Executation"
+
+on:
+  schedule:
+    - cron: "45 10 * * *"
+
+jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Instalando Yarn
+        run: npm install -g yarn
+
+      - name: Instalando Dependencias
+        run: yarn
+
+      - name: Executando testes e2e
+        run: yarn run test
